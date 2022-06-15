@@ -5,11 +5,8 @@ import DataList from './components/DataList'
 function App() {
   const [dataState, setDataState]=useState([]);
   async function fetchHandler(){
-    const response = await fetch("https://ssd-api.jpl.nasa.gov/fireball.api?limit=50");
+    const response = await fetch("https://ssd-api.jpl.nasa.gov/fireball.api?limit=25");
     const data = await response.json();
-    console.log("hey bestie");
-    console.log(data.data);
-    console.log("hey bestie");
     const transformedData = await data.data.map((fireballData) => {
       return {
         date:fireballData[0],
