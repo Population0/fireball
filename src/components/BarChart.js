@@ -9,7 +9,7 @@ function BarChart({dataProp }) {
   console.log(dataProp);
   const BarChartConstants={
     ymax: 1000,
-    xmax: 1000,
+    xmax: window.screen.availWidth,
     leftMargin: 100,
     rightMargin: 100,
     lowerMargin:150
